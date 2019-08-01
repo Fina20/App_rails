@@ -1,0 +1,377 @@
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (218.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (196.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMovies (20190801061456)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMovies (20190801061456)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMovies (20190801061456)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMovies (20190801061456)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "movies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "year" integer, "genre" varchar, "synopsis" text, "director" varchar, "allocine_rating" float, "my_rating" integer, "already_seen" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190801061456"]]
+  [1m[35m (210.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-01 06:25:20.174933"], ["updated_at", "2019-08-01 06:25:20.174933"]]
+  [1m[35m (160.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (27.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (111.1ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "my_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Beowulf"], ["year", 1999], ["genre", "Fantastique, Action, Epouvante-horreur"], ["synopsis", "La Terre a traverse de nombreuses crises et cataclysmes. Les hommes vivent dans la peur et dans l'obscurite car les tenebres voilent desormais la lumiere du soleil. Dans cet univers hostile, erre un homme maudit et solitaire, Beowulf, fruit des amours interdites d'une mortelle avec le diable. Pour vaincre le monstre qui est en lui, Beowulf doit combattre le mal. Son plus redoutable adversaire est une creature tapie dans les combles d'une forteresse. Invincible, d'une sauvagerie sans nom, elle tue quotidiennement puis disparait des l'aube. "], ["director", "Graham Baker"], ["allocine_rating", 1.2], ["my_rating", 5], ["already_seen", 1], ["created_at", "2019-08-01 07:00:56.673835"], ["updated_at", "2019-08-01 07:00:56.673835"]]
+  [1m[35m (348.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (351.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (341.6ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "my_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "L'exorciste"], ["year", 1974], ["genre", " Epouvante-horreur"], ["synopsis", "L'actrice Chris McNeil est inquiète au sujet de sa fillette Regan : après que l'on ait entendu des bruits curieux venant de sa chambre, la petite a changé, proférant de constantes insanités. Une force para-normale l'habite, qui coûte la vie au metteur en scène de Chris. Désespérée, cette dernière fait appel à deux exorcistes... "], ["director", "William Friedkin"], ["allocine_rating", 3.9], ["my_rating", 10], ["already_seen", 1], ["created_at", "2019-08-01 07:11:59.681712"], ["updated_at", "2019-08-01 07:11:59.681712"]]
+  [1m[35m (246.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (49.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (23.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (11.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2019-08-01 07:13:24.682984"], ["updated_at", "2019-08-01 07:13:24.682984"]]
+  [1m[35m (187.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (14.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (2.9ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "OSS 117, Le Caire nid d'espions"], ["year", 2006], ["genre", " Comédie, Action, Espionnage"], ["synopsis", "Égypte, 1955, le Caire est un véritable nid d'espions.Tout le monde se méfie de tout le monde, tout le monde complote contre tout le monde : Anglais, Français, Soviétiques, la famille du Roi déchu Farouk qui veut retrouver son trône, les Aigles de Kheops, secte religieuse qui veut prendre le pouvoir. Le Président de la République Française, Monsieur René Coty, envoie son arme maîtresse mettre de l'ordre dans cette pétaudière au bord du chaos : Hubert Bonisseur de la Bath, dit OSS 117. "], ["director", " Michel Hazanavicius"], ["allocine_rating", 3.5], ["already_seen", 1], ["created_at", "2019-08-01 07:34:16.626915"], ["updated_at", "2019-08-01 07:34:16.626915"]]
+  [1m[35m (194.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "my_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "tsy azoko"], ["year", 2007], ["genre", " Comédie, Action"], ["synopsis", "tambanivohitra miakatra ville vendrana be"], ["director", " Francis Turbo"], ["allocine_rating", 5.5], ["my_rating", 20], ["already_seen", 1], ["created_at", "2019-08-01 07:39:16.148176"], ["updated_at", "2019-08-01 07:39:16.148176"]]
+  [1m[35m (170.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 3]]
+  [1m[35m (131.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Update (1.5ms)[0m  [1m[33mUPDATE "movies" SET "allocine_rating" = ?, "updated_at" = ? WHERE "movies"."id" = ?[0m  [["allocine_rating", 4.7], ["updated_at", "2019-08-01 07:53:56.576865"], ["id", 2]]
+  [1m[35m (117.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Update (3.3ms)[0m  [1m[33mUPDATE "movies" SET "genre" = ?, "updated_at" = ? WHERE "movies"."id" = ?[0m  [["genre", "comedie"], ["updated_at", "2019-08-01 07:58:28.166194"], ["id", 2]]
+  [1m[35m (124.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."already_seen" = ? ORDER BY "movies"."created_at" DESC LIMIT ?[0m  [["already_seen", 1], ["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rachele Runolfsson"], ["year", 1995], ["genre", "Pop"], ["synopsis", "fisher"], ["director", "Keeling"], ["allocine_rating", 0.6], ["already_seen", 0], ["created_at", "2019-08-01 08:55:08.308474"], ["updated_at", "2019-08-01 08:55:08.308474"]]
+  [1m[35m (195.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rene Dooley"], ["year", 2000], ["genre", "Pop"], ["synopsis", "auerking"], ["director", "Senger"], ["allocine_rating", 0.29], ["already_seen", 0], ["created_at", "2019-08-01 08:55:08.510680"], ["updated_at", "2019-08-01 08:55:08.510680"]]
+  [1m[35m (134.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Deangelo Schimmel"], ["year", 2018], ["genre", "Non Music"], ["synopsis", "thompson"], ["director", "Boyle"], ["allocine_rating", 1.83], ["already_seen", 0], ["created_at", "2019-08-01 08:55:08.655072"], ["updated_at", "2019-08-01 08:55:08.655072"]]
+  [1m[35m (176.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Carmine Lynch"], ["year", 2005], ["genre", "Jazz"], ["synopsis", "davis"], ["director", "Altenwerth"], ["allocine_rating", 2.37], ["already_seen", 0], ["created_at", "2019-08-01 08:55:08.852636"], ["updated_at", "2019-08-01 08:55:08.852636"]]
+  [1m[35m (138.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (1.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joleen Marvin IV"], ["year", 2006], ["genre", "Pop"], ["synopsis", "botsford"], ["director", "Hartmann"], ["allocine_rating", 0.57], ["already_seen", 0], ["created_at", "2019-08-01 08:55:08.998235"], ["updated_at", "2019-08-01 08:55:08.998235"]]
+  [1m[35m (133.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jeannine Kemmer"], ["year", 2013], ["genre", "Blues"], ["synopsis", "ko"], ["director", "Cruickshank"], ["allocine_rating", 4.44], ["already_seen", 0], ["created_at", "2019-08-01 08:55:09.139870"], ["updated_at", "2019-08-01 08:55:09.139870"]]
+  [1m[35m (137.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ms. Elizabeth Kuhlman"], ["year", 2018], ["genre", "World"], ["synopsis", "hansen"], ["director", "Fay"], ["allocine_rating", 3.4], ["already_seen", 0], ["created_at", "2019-08-01 08:55:09.284311"], ["updated_at", "2019-08-01 08:55:09.284311"]]
+  [1m[35m (138.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ms. Isidro Kerluke"], ["year", 1997], ["genre", "Electronic"], ["synopsis", "ruecker"], ["director", "Hane"], ["allocine_rating", 0.86], ["already_seen", 0], ["created_at", "2019-08-01 08:55:09.428352"], ["updated_at", "2019-08-01 08:55:09.428352"]]
+  [1m[35m (138.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sandy Durgan PhD"], ["year", 2018], ["genre", "Blues"], ["synopsis", "kohler"], ["director", "Harris"], ["allocine_rating", 0.71], ["already_seen", 0], ["created_at", "2019-08-01 08:55:09.571834"], ["updated_at", "2019-08-01 08:55:09.571834"]]
+  [1m[35m (127.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Evan Larson"], ["year", 2007], ["genre", "Folk"], ["synopsis", "abernathy"], ["director", "Shanahan"], ["allocine_rating", 1.93], ["already_seen", 0], ["created_at", "2019-08-01 08:55:09.704730"], ["updated_at", "2019-08-01 08:55:09.704730"]]
+  [1m[35m (127.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rolando Treutel"], ["year", 2015], ["genre", "Soul"], ["synopsis", "west"], ["director", "Adams"], ["allocine_rating", 2.49], ["already_seen", 0], ["created_at", "2019-08-01 08:55:09.837700"], ["updated_at", "2019-08-01 08:55:09.837700"]]
+  [1m[35m (127.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Robbin Strosin"], ["year", 2011], ["genre", "Classical"], ["synopsis", "lemkewatsica"], ["director", "Wilkinson"], ["allocine_rating", 0.25], ["already_seen", 0], ["created_at", "2019-08-01 08:55:09.970622"], ["updated_at", "2019-08-01 08:55:09.970622"]]
+  [1m[35m (127.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rene Jacobson"], ["year", 2003], ["genre", "Country"], ["synopsis", "kulas"], ["director", "Beatty"], ["allocine_rating", 4.27], ["already_seen", 0], ["created_at", "2019-08-01 08:55:10.103451"], ["updated_at", "2019-08-01 08:55:10.103451"]]
+  [1m[35m (123.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chadwick Moen"], ["year", 2010], ["genre", "Rock"], ["synopsis", "gulgowskijenkins"], ["director", "O'Conner"], ["allocine_rating", 3.38], ["already_seen", 0], ["created_at", "2019-08-01 08:55:10.232221"], ["updated_at", "2019-08-01 08:55:10.232221"]]
+  [1m[35m (193.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Marquis Tillman"], ["year", 2015], ["genre", "World"], ["synopsis", "buckridge"], ["director", "Heller"], ["allocine_rating", 3.08], ["already_seen", 0], ["created_at", "2019-08-01 08:55:10.431630"], ["updated_at", "2019-08-01 08:55:10.431630"]]
+  [1m[35m (127.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mr. Sang Considine"], ["year", 1996], ["genre", "Folk"], ["synopsis", "mosciski"], ["director", "Jenkins"], ["allocine_rating", 0.09], ["already_seen", 0], ["created_at", "2019-08-01 08:55:10.564698"], ["updated_at", "2019-08-01 08:55:10.564698"]]
+  [1m[35m (126.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alleen Batz"], ["year", 1996], ["genre", "Reggae"], ["synopsis", "okunevarolfson"], ["director", "Hammes"], ["allocine_rating", 2.75], ["already_seen", 0], ["created_at", "2019-08-01 08:55:10.697488"], ["updated_at", "2019-08-01 08:55:10.697488"]]
+  [1m[35m (127.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mr. Joanie Buckridge"], ["year", 2015], ["genre", "Hip Hop"], ["synopsis", "kaulke"], ["director", "Schroeder"], ["allocine_rating", 2.39], ["already_seen", 0], ["created_at", "2019-08-01 08:55:10.830524"], ["updated_at", "2019-08-01 08:55:10.830524"]]
+  [1m[35m (126.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Retta MacGyver"], ["year", 2010], ["genre", "Non Music"], ["synopsis", "greenholtwolf"], ["director", "Crona"], ["allocine_rating", 0.24], ["already_seen", 0], ["created_at", "2019-08-01 08:55:10.963263"], ["updated_at", "2019-08-01 08:55:10.963263"]]
+  [1m[35m (202.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mr. Ian Wolff"], ["year", 1998], ["genre", "Reggae"], ["synopsis", "deckowjakubowski"], ["director", "Fisher"], ["allocine_rating", 1.07], ["already_seen", 0], ["created_at", "2019-08-01 08:55:11.171630"], ["updated_at", "2019-08-01 08:55:11.171630"]]
+  [1m[35m (193.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Philip Rosenbaum"], ["year", 2010], ["genre", "Country"], ["synopsis", "hauck"], ["director", "Schuppe"], ["allocine_rating", 4.42], ["already_seen", 0], ["created_at", "2019-08-01 08:55:11.373082"], ["updated_at", "2019-08-01 08:55:11.373082"]]
+  [1m[35m (193.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Melynda Dach"], ["year", 2002], ["genre", "Pop"], ["synopsis", "vonrueden"], ["director", "Berge"], ["allocine_rating", 0.1], ["already_seen", 0], ["created_at", "2019-08-01 08:55:11.572391"], ["updated_at", "2019-08-01 08:55:11.572391"]]
+  [1m[35m (209.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alton West"], ["year", 1995], ["genre", "Folk"], ["synopsis", "ankundinggreenholt"], ["director", "Stiedemann"], ["allocine_rating", 2.32], ["already_seen", 0], ["created_at", "2019-08-01 08:55:11.786977"], ["updated_at", "2019-08-01 08:55:11.786977"]]
+  [1m[35m (205.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sheridan Hessel"], ["year", 2006], ["genre", "Reggae"], ["synopsis", "beahan"], ["director", "Tremblay"], ["allocine_rating", 1.68], ["already_seen", 0], ["created_at", "2019-08-01 08:55:11.997399"], ["updated_at", "2019-08-01 08:55:11.997399"]]
+  [1m[35m (205.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Angella Jast"], ["year", 2014], ["genre", "Reggae"], ["synopsis", "mcdermott"], ["director", "Stanton"], ["allocine_rating", 3.64], ["already_seen", 0], ["created_at", "2019-08-01 08:55:12.207797"], ["updated_at", "2019-08-01 08:55:12.207797"]]
+  [1m[35m (227.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Laticia Herzog"], ["year", 2003], ["genre", "World"], ["synopsis", "mosciski"], ["director", "Koelpin"], ["allocine_rating", 4.61], ["already_seen", 0], ["created_at", "2019-08-01 08:55:12.440431"], ["updated_at", "2019-08-01 08:55:12.440431"]]
+  [1m[35m (205.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Leonora Christiansen"], ["year", 2018], ["genre", "Stage And Screen"], ["synopsis", "marvin"], ["director", "McClure"], ["allocine_rating", 1.04], ["already_seen", 0], ["created_at", "2019-08-01 08:55:12.650785"], ["updated_at", "2019-08-01 08:55:12.650785"]]
+  [1m[35m (205.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Drusilla Goyette"], ["year", 2000], ["genre", "World"], ["synopsis", "schoen"], ["director", "Prohaska"], ["allocine_rating", 3.48], ["already_seen", 0], ["created_at", "2019-08-01 08:55:12.861266"], ["updated_at", "2019-08-01 08:55:12.861266"]]
+  [1m[35m (205.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Rosario Casper"], ["year", 2006], ["genre", "Blues"], ["synopsis", "spencerklocko"], ["director", "Abbott"], ["allocine_rating", 2.22], ["already_seen", 0], ["created_at", "2019-08-01 08:55:13.071735"], ["updated_at", "2019-08-01 08:55:13.071735"]]
+  [1m[35m (228.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cordelia Hansen"], ["year", 2016], ["genre", "Soul"], ["synopsis", "shieldsmccullough"], ["director", "Bailey"], ["allocine_rating", 4.46], ["already_seen", 0], ["created_at", "2019-08-01 08:55:13.305558"], ["updated_at", "2019-08-01 08:55:13.305558"]]
+  [1m[35m (204.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elmer Streich"], ["year", 2007], ["genre", "Funk"], ["synopsis", "carroll"], ["director", "Kihn"], ["allocine_rating", 4.56], ["already_seen", 0], ["created_at", "2019-08-01 08:55:13.514875"], ["updated_at", "2019-08-01 08:55:13.514875"]]
+  [1m[35m (228.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rhonda Friesen"], ["year", 2006], ["genre", "Hip Hop"], ["synopsis", "markshackett"], ["director", "Shanahan"], ["allocine_rating", 3.4], ["already_seen", 0], ["created_at", "2019-08-01 08:55:13.748494"], ["updated_at", "2019-08-01 08:55:13.748494"]]
+  [1m[35m (204.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Charles Cummerata"], ["year", 2003], ["genre", "Folk"], ["synopsis", "nicolas"], ["director", "Kreiger"], ["allocine_rating", 1.55], ["already_seen", 0], ["created_at", "2019-08-01 08:55:13.957811"], ["updated_at", "2019-08-01 08:55:13.957811"]]
+  [1m[35m (205.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Audra Simonis DVM"], ["year", 1999], ["genre", "Latin"], ["synopsis", "cole"], ["director", "Hackett"], ["allocine_rating", 1.37], ["already_seen", 0], ["created_at", "2019-08-01 08:55:14.169079"], ["updated_at", "2019-08-01 08:55:14.169079"]]
+  [1m[35m (202.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elijah Will"], ["year", 2015], ["genre", "Classical"], ["synopsis", "hyatt"], ["director", "Harvey"], ["allocine_rating", 3.96], ["already_seen", 0], ["created_at", "2019-08-01 08:55:14.380334"], ["updated_at", "2019-08-01 08:55:14.380334"]]
+  [1m[35m (201.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bertha Wyman"], ["year", 2009], ["genre", "Country"], ["synopsis", "buckridgestiedemann"], ["director", "Bins"], ["allocine_rating", 1.27], ["already_seen", 0], ["created_at", "2019-08-01 08:55:14.590468"], ["updated_at", "2019-08-01 08:55:14.590468"]]
+  [1m[35m (201.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Wayne Kemmer"], ["year", 2010], ["genre", "Stage And Screen"], ["synopsis", "kingbosco"], ["director", "Considine"], ["allocine_rating", 4.15], ["already_seen", 0], ["created_at", "2019-08-01 08:55:14.799547"], ["updated_at", "2019-08-01 08:55:14.799547"]]
+  [1m[35m (205.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rolf Sauer"], ["year", 2015], ["genre", "Classical"], ["synopsis", "farrell"], ["director", "Konopelski"], ["allocine_rating", 3.93], ["already_seen", 0], ["created_at", "2019-08-01 08:55:15.009901"], ["updated_at", "2019-08-01 08:55:15.009901"]]
+  [1m[35m (205.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Keven Sporer"], ["year", 2012], ["genre", "Classical"], ["synopsis", "mayert"], ["director", "Flatley"], ["allocine_rating", 3.33], ["already_seen", 0], ["created_at", "2019-08-01 08:55:15.220970"], ["updated_at", "2019-08-01 08:55:15.220970"]]
+  [1m[35m (204.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joey Friesen"], ["year", 2015], ["genre", "Jazz"], ["synopsis", "homenick"], ["director", "Von"], ["allocine_rating", 1.26], ["already_seen", 0], ["created_at", "2019-08-01 08:55:15.432645"], ["updated_at", "2019-08-01 08:55:15.432645"]]
+  [1m[35m (201.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Samual Huel"], ["year", 2012], ["genre", "World"], ["synopsis", "mueller"], ["director", "Buckridge"], ["allocine_rating", 4.49], ["already_seen", 0], ["created_at", "2019-08-01 08:55:15.642973"], ["updated_at", "2019-08-01 08:55:15.642973"]]
+  [1m[35m (189.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tuan Schuppe"], ["year", 2014], ["genre", "Rap"], ["synopsis", "rempel"], ["director", "Runolfsdottir"], ["allocine_rating", 0.42], ["already_seen", 0], ["created_at", "2019-08-01 08:55:15.842293"], ["updated_at", "2019-08-01 08:55:15.842293"]]
+  [1m[35m (189.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lauren Walter"], ["year", 2015], ["genre", "Blues"], ["synopsis", "thompson"], ["director", "Grimes"], ["allocine_rating", 3.51], ["already_seen", 0], ["created_at", "2019-08-01 08:55:16.041553"], ["updated_at", "2019-08-01 08:55:16.041553"]]
+  [1m[35m (225.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Claribel Schmidt"], ["year", 1998], ["genre", "Soul"], ["synopsis", "greenfelder"], ["director", "Tromp"], ["allocine_rating", 1.15], ["already_seen", 0], ["created_at", "2019-08-01 08:55:16.275361"], ["updated_at", "2019-08-01 08:55:16.275361"]]
+  [1m[35m (200.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Merrill Medhurst PhD"], ["year", 1995], ["genre", "Soul"], ["synopsis", "ratke"], ["director", "Fisher"], ["allocine_rating", 1.24], ["already_seen", 0], ["created_at", "2019-08-01 08:55:16.484648"], ["updated_at", "2019-08-01 08:55:16.484648"]]
+  [1m[35m (201.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Anderson Stamm"], ["year", 2002], ["genre", "Hip Hop"], ["synopsis", "runolfon"], ["director", "Friesen"], ["allocine_rating", 1.27], ["already_seen", 0], ["created_at", "2019-08-01 08:55:16.694995"], ["updated_at", "2019-08-01 08:55:16.694995"]]
+  [1m[35m (201.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gwendolyn Ward"], ["year", 2010], ["genre", "Latin"], ["synopsis", "schmitt"], ["director", "Rau"], ["allocine_rating", 3.39], ["already_seen", 0], ["created_at", "2019-08-01 08:55:16.903935"], ["updated_at", "2019-08-01 08:55:16.903935"]]
+  [1m[35m (204.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Colin O'Kon DDS"], ["year", 2015], ["genre", "Latin"], ["synopsis", "welchleffler"], ["director", "Kemmer"], ["allocine_rating", 1.83], ["already_seen", 0], ["created_at", "2019-08-01 08:55:17.114361"], ["updated_at", "2019-08-01 08:55:17.114361"]]
+  [1m[35m (206.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ms. Edyth Becker"], ["year", 2007], ["genre", "Stage And Screen"], ["synopsis", "schiller"], ["director", "Mraz"], ["allocine_rating", 0.66], ["already_seen", 0], ["created_at", "2019-08-01 08:55:17.326781"], ["updated_at", "2019-08-01 08:55:17.326781"]]
+  [1m[35m (223.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Linwood Weissnat"], ["year", 1996], ["genre", "World"], ["synopsis", "murazik"], ["director", "Feeney"], ["allocine_rating", 3.19], ["already_seen", 0], ["created_at", "2019-08-01 08:55:17.559326"], ["updated_at", "2019-08-01 08:55:17.559326"]]
+  [1m[35m (201.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Teddy Brekke"], ["year", 1998], ["genre", "Blues"], ["synopsis", "cormieremard"], ["director", "Reichert"], ["allocine_rating", 4.35], ["already_seen", 0], ["created_at", "2019-08-01 08:55:17.769347"], ["updated_at", "2019-08-01 08:55:17.769347"]]
+  [1m[35m (224.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yon Jacobson"], ["year", 1995], ["genre", "Non Music"], ["synopsis", "stracke"], ["director", "Terry"], ["allocine_rating", 1.96], ["already_seen", 0], ["created_at", "2019-08-01 08:55:18.000710"], ["updated_at", "2019-08-01 08:55:18.000710"]]
+  [1m[35m (249.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sang Kozey"], ["year", 2012], ["genre", "Folk"], ["synopsis", "kuphal"], ["director", "Stark"], ["allocine_rating", 4.34], ["already_seen", 0], ["created_at", "2019-08-01 08:55:18.255292"], ["updated_at", "2019-08-01 08:55:18.255292"]]
+  [1m[35m (315.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Katharine Schowalter"], ["year", 2017], ["genre", "Stage And Screen"], ["synopsis", "jacobson"], ["director", "Keeling"], ["allocine_rating", 1.78], ["already_seen", 0], ["created_at", "2019-08-01 08:55:18.576237"], ["updated_at", "2019-08-01 08:55:18.576237"]]
+  [1m[35m (238.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Latina Heller"], ["year", 1997], ["genre", "Soul"], ["synopsis", "kshlerinkunze"], ["director", "Bernhard"], ["allocine_rating", 3.19], ["already_seen", 0], ["created_at", "2019-08-01 08:55:18.819740"], ["updated_at", "2019-08-01 08:55:18.819740"]]
+  [1m[35m (192.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Mitchell Rogahn"], ["year", 2011], ["genre", "Stage And Screen"], ["synopsis", "hauck"], ["director", "Mosciski"], ["allocine_rating", 2.98], ["already_seen", 0], ["created_at", "2019-08-01 08:55:19.031467"], ["updated_at", "2019-08-01 08:55:19.031467"]]
+  [1m[35m (193.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alia Pacocha"], ["year", 2017], ["genre", "Rock"], ["synopsis", "stehr"], ["director", "O'Kon"], ["allocine_rating", 2.17], ["already_seen", 0], ["created_at", "2019-08-01 08:55:19.230680"], ["updated_at", "2019-08-01 08:55:19.230680"]]
+  [1m[35m (305.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chau Kub"], ["year", 2001], ["genre", "Electronic"], ["synopsis", "kohler"], ["director", "Reichert"], ["allocine_rating", 2.01], ["already_seen", 0], ["created_at", "2019-08-01 08:55:19.541844"], ["updated_at", "2019-08-01 08:55:19.541844"]]
+  [1m[35m (193.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Stephaine West"], ["year", 2003], ["genre", "Hip Hop"], ["synopsis", "west"], ["director", "Towne"], ["allocine_rating", 1.37], ["already_seen", 0], ["created_at", "2019-08-01 08:55:19.739990"], ["updated_at", "2019-08-01 08:55:19.739990"]]
+  [1m[35m (204.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Salvatore Ritchie"], ["year", 1995], ["genre", "Classical"], ["synopsis", "lowenicolas"], ["director", "Aufderhar"], ["allocine_rating", 3.8], ["already_seen", 0], ["created_at", "2019-08-01 08:55:19.950492"], ["updated_at", "2019-08-01 08:55:19.950492"]]
+  [1m[35m (138.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ignacio Johnson"], ["year", 1995], ["genre", "Latin"], ["synopsis", "lueilwitz"], ["director", "Crooks"], ["allocine_rating", 3.2], ["already_seen", 0], ["created_at", "2019-08-01 08:55:20.094366"], ["updated_at", "2019-08-01 08:55:20.094366"]]
+  [1m[35m (138.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pierre Ferry"], ["year", 2007], ["genre", "Pop"], ["synopsis", "satterfieldmetz"], ["director", "Conroy"], ["allocine_rating", 1.19], ["already_seen", 0], ["created_at", "2019-08-01 08:55:20.239092"], ["updated_at", "2019-08-01 08:55:20.239092"]]
+  [1m[35m (202.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (1.1ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Herb Collier"], ["year", 2014], ["genre", "Electronic"], ["synopsis", "marquardtfisher"], ["director", "Marks"], ["allocine_rating", 1.83], ["already_seen", 0], ["created_at", "2019-08-01 08:55:20.450584"], ["updated_at", "2019-08-01 08:55:20.450584"]]
+  [1m[35m (201.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Ena Hickle"], ["year", 1998], ["genre", "Hip Hop"], ["synopsis", "sauer"], ["director", "Kassulke"], ["allocine_rating", 2.29], ["already_seen", 0], ["created_at", "2019-08-01 08:55:20.659215"], ["updated_at", "2019-08-01 08:55:20.659215"]]
+  [1m[35m (205.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jame O'Kon"], ["year", 1997], ["genre", "Folk"], ["synopsis", "johns"], ["director", "Quigley"], ["allocine_rating", 1.1], ["already_seen", 0], ["created_at", "2019-08-01 08:55:20.870546"], ["updated_at", "2019-08-01 08:55:20.870546"]]
+  [1m[35m (204.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Tuan Kuhn"], ["year", 2012], ["genre", "World"], ["synopsis", "price"], ["director", "Huel"], ["allocine_rating", 1.31], ["already_seen", 0], ["created_at", "2019-08-01 08:55:21.081368"], ["updated_at", "2019-08-01 08:55:21.081368"]]
+  [1m[35m (190.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ms. Kristie Gaylord"], ["year", 2018], ["genre", "World"], ["synopsis", "reichel"], ["director", "Kuvalis"], ["allocine_rating", 3.89], ["already_seen", 0], ["created_at", "2019-08-01 08:55:21.280116"], ["updated_at", "2019-08-01 08:55:21.280116"]]
+  [1m[35m (134.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dallas Cartwright"], ["year", 2002], ["genre", "Stage And Screen"], ["synopsis", "homenick"], ["director", "Fay"], ["allocine_rating", 2.21], ["already_seen", 0], ["created_at", "2019-08-01 08:55:21.424183"], ["updated_at", "2019-08-01 08:55:21.424183"]]
+  [1m[35m (145.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rowena Hand"], ["year", 2005], ["genre", "Classical"], ["synopsis", "toy"], ["director", "Hodkiewicz"], ["allocine_rating", 2.87], ["already_seen", 0], ["created_at", "2019-08-01 08:55:21.579197"], ["updated_at", "2019-08-01 08:55:21.579197"]]
+  [1m[35m (190.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Marvella Schulist"], ["year", 1999], ["genre", "Latin"], ["synopsis", "jast"], ["director", "Christiansen"], ["allocine_rating", 4.24], ["already_seen", 0], ["created_at", "2019-08-01 08:55:21.778561"], ["updated_at", "2019-08-01 08:55:21.778561"]]
+  [1m[35m (157.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sharen Torphy Sr."], ["year", 2002], ["genre", "Folk"], ["synopsis", "willms"], ["director", "Rutherford"], ["allocine_rating", 0.21], ["already_seen", 0], ["created_at", "2019-08-01 08:55:21.943511"], ["updated_at", "2019-08-01 08:55:21.943511"]]
+  [1m[35m (205.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (1.2ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lilli Mohr"], ["year", 2003], ["genre", "Stage And Screen"], ["synopsis", "rennerschowalter"], ["director", "Kuhic"], ["allocine_rating", 2.63], ["already_seen", 0], ["created_at", "2019-08-01 08:55:22.156045"], ["updated_at", "2019-08-01 08:55:22.156045"]]
+  [1m[35m (201.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Gerald Nitzsche"], ["year", 2004], ["genre", "Electronic"], ["synopsis", "schuster"], ["director", "Gibson"], ["allocine_rating", 4.89], ["already_seen", 0], ["created_at", "2019-08-01 08:55:22.366316"], ["updated_at", "2019-08-01 08:55:22.366316"]]
+  [1m[35m (223.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "David Donnelly"], ["year", 1997], ["genre", "World"], ["synopsis", "hyattmitchell"], ["director", "Torphy"], ["allocine_rating", 1.21], ["already_seen", 0], ["created_at", "2019-08-01 08:55:22.598966"], ["updated_at", "2019-08-01 08:55:22.598966"]]
+  [1m[35m (245.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gaynell Waters"], ["year", 2003], ["genre", "Electronic"], ["synopsis", "fritsch"], ["director", "Schamberger"], ["allocine_rating", 4.99], ["already_seen", 0], ["created_at", "2019-08-01 08:55:22.853228"], ["updated_at", "2019-08-01 08:55:22.853228"]]
+  [1m[35m (201.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nu Larkin"], ["year", 2012], ["genre", "Funk"], ["synopsis", "flatley"], ["director", "Hoppe"], ["allocine_rating", 0.04], ["already_seen", 0], ["created_at", "2019-08-01 08:55:23.061935"], ["updated_at", "2019-08-01 08:55:23.061935"]]
+  [1m[35m (205.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Christoper Fritsch II"], ["year", 2007], ["genre", "Jazz"], ["synopsis", "schinner"], ["director", "Turcotte"], ["allocine_rating", 4.34], ["already_seen", 0], ["created_at", "2019-08-01 08:55:23.272190"], ["updated_at", "2019-08-01 08:55:23.272190"]]
+  [1m[35m (205.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Maxwell Bayer"], ["year", 2002], ["genre", "Rock"], ["synopsis", "walsh"], ["director", "Schaefer"], ["allocine_rating", 2.01], ["already_seen", 0], ["created_at", "2019-08-01 08:55:23.482693"], ["updated_at", "2019-08-01 08:55:23.482693"]]
+  [1m[35m (205.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Patsy Oberbrunner"], ["year", 1995], ["genre", "Pop"], ["synopsis", "mitchell"], ["director", "Reilly"], ["allocine_rating", 3.65], ["already_seen", 0], ["created_at", "2019-08-01 08:55:23.693079"], ["updated_at", "2019-08-01 08:55:23.693079"]]
+  [1m[35m (205.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Penney Collier Jr."], ["year", 2010], ["genre", "Blues"], ["synopsis", "strackewalsh"], ["director", "Schroeder"], ["allocine_rating", 1.23], ["already_seen", 0], ["created_at", "2019-08-01 08:55:23.903574"], ["updated_at", "2019-08-01 08:55:23.903574"]]
+  [1m[35m (205.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Florencio Nicolas"], ["year", 1996], ["genre", "Jazz"], ["synopsis", "quitzon"], ["director", "Blanda"], ["allocine_rating", 1.49], ["already_seen", 0], ["created_at", "2019-08-01 08:55:24.114541"], ["updated_at", "2019-08-01 08:55:24.114541"]]
+  [1m[35m (205.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jamal Towne"], ["year", 2006], ["genre", "Country"], ["synopsis", "rippin"], ["director", "Beahan"], ["allocine_rating", 4.68], ["already_seen", 0], ["created_at", "2019-08-01 08:55:24.325259"], ["updated_at", "2019-08-01 08:55:24.325259"]]
+  [1m[35m (204.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Hayley Lemke"], ["year", 2005], ["genre", "Latin"], ["synopsis", "donnelly"], ["director", "Bergnaum"], ["allocine_rating", 4.77], ["already_seen", 0], ["created_at", "2019-08-01 08:55:24.535946"], ["updated_at", "2019-08-01 08:55:24.535946"]]
+  [1m[35m (206.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vince McLaughlin"], ["year", 2015], ["genre", "Non Music"], ["synopsis", "osinski"], ["director", "Erdman"], ["allocine_rating", 0.91], ["already_seen", 0], ["created_at", "2019-08-01 08:55:24.747877"], ["updated_at", "2019-08-01 08:55:24.747877"]]
+  [1m[35m (201.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jae Bradtke"], ["year", 2013], ["genre", "Pop"], ["synopsis", "schneiderwiegand"], ["director", "Beahan"], ["allocine_rating", 2.02], ["already_seen", 0], ["created_at", "2019-08-01 08:55:24.957335"], ["updated_at", "2019-08-01 08:55:24.957335"]]
+  [1m[35m (202.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Katerine Mosciski"], ["year", 2008], ["genre", "Folk"], ["synopsis", "effertz"], ["director", "Dibbert"], ["allocine_rating", 4.74], ["already_seen", 0], ["created_at", "2019-08-01 08:55:25.167558"], ["updated_at", "2019-08-01 08:55:25.167558"]]
+  [1m[35m (202.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Geralyn Senger"], ["year", 2014], ["genre", "Classical"], ["synopsis", "volkmanswift"], ["director", "Bailey"], ["allocine_rating", 2.4], ["already_seen", 0], ["created_at", "2019-08-01 08:55:25.377981"], ["updated_at", "2019-08-01 08:55:25.377981"]]
+  [1m[35m (224.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Retta Green"], ["year", 2003], ["genre", "Hip Hop"], ["synopsis", "okeefewalker"], ["director", "Stoltenberg"], ["allocine_rating", 1.69], ["already_seen", 0], ["created_at", "2019-08-01 08:55:25.610591"], ["updated_at", "2019-08-01 08:55:25.610591"]]
+  [1m[35m (202.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Tova Dibbert"], ["year", 2013], ["genre", "Electronic"], ["synopsis", "wintheiserwatsica"], ["director", "Adams"], ["allocine_rating", 0.5], ["already_seen", 0], ["created_at", "2019-08-01 08:55:25.821084"], ["updated_at", "2019-08-01 08:55:25.821084"]]
+  [1m[35m (250.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tashia Gislason DDS"], ["year", 2001], ["genre", "Country"], ["synopsis", "heaney"], ["director", "Breitenberg"], ["allocine_rating", 1.88], ["already_seen", 0], ["created_at", "2019-08-01 08:55:26.079620"], ["updated_at", "2019-08-01 08:55:26.079620"]]
+  [1m[35m (195.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hunter Weissnat"], ["year", 2004], ["genre", "Electronic"], ["synopsis", "hermanhermann"], ["director", "Murray"], ["allocine_rating", 1.93], ["already_seen", 0], ["created_at", "2019-08-01 08:55:26.282093"], ["updated_at", "2019-08-01 08:55:26.282093"]]
+  [1m[35m (202.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lucio Brekke"], ["year", 2006], ["genre", "Hip Hop"], ["synopsis", "lueilwitzdaugherty"], ["director", "Ratke"], ["allocine_rating", 1.34], ["already_seen", 0], ["created_at", "2019-08-01 08:55:26.492527"], ["updated_at", "2019-08-01 08:55:26.492527"]]
+  [1m[35m (213.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Wade Marquardt"], ["year", 2011], ["genre", "Jazz"], ["synopsis", "blickklein"], ["director", "Prohaska"], ["allocine_rating", 2.43], ["already_seen", 0], ["created_at", "2019-08-01 08:55:26.712856"], ["updated_at", "2019-08-01 08:55:26.712856"]]
+  [1m[35m (283.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (1.2ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sal Douglas PhD"], ["year", 2006], ["genre", "Rap"], ["synopsis", "kilback"], ["director", "Dibbert"], ["allocine_rating", 4.79], ["already_seen", 0], ["created_at", "2019-08-01 08:55:27.002320"], ["updated_at", "2019-08-01 08:55:27.002320"]]
+  [1m[35m (234.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lorine Stroman"], ["year", 2010], ["genre", "Jazz"], ["synopsis", "blickmraz"], ["director", "McKenzie"], ["allocine_rating", 0.36], ["already_seen", 0], ["created_at", "2019-08-01 08:55:27.246601"], ["updated_at", "2019-08-01 08:55:27.246601"]]
+  [1m[35m (223.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Philip Rogahn V"], ["year", 2017], ["genre", "Jazz"], ["synopsis", "wehnerschowalter"], ["director", "Spencer"], ["allocine_rating", 0.83], ["already_seen", 0], ["created_at", "2019-08-01 08:55:27.478718"], ["updated_at", "2019-08-01 08:55:27.478718"]]
+  [1m[35m (189.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Caitlyn Adams"], ["year", 1996], ["genre", "Funk"], ["synopsis", "maggiosauer"], ["director", "Walsh"], ["allocine_rating", 3.13], ["already_seen", 0], ["created_at", "2019-08-01 08:55:27.675984"], ["updated_at", "2019-08-01 08:55:27.675984"]]
+  [1m[35m (250.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tanna Kirlin"], ["year", 2003], ["genre", "Rap"], ["synopsis", "walkerwest"], ["director", "Harber"], ["allocine_rating", 0.63], ["already_seen", 0], ["created_at", "2019-08-01 08:55:27.930929"], ["updated_at", "2019-08-01 08:55:27.930929"]]
+  [1m[35m (205.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jack Mraz"], ["year", 2016], ["genre", "Hip Hop"], ["synopsis", "stanton"], ["director", "Casper"], ["allocine_rating", 1.24], ["already_seen", 0], ["created_at", "2019-08-01 08:55:28.141306"], ["updated_at", "2019-08-01 08:55:28.141306"]]
+  [1m[35m (227.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "genre", "synopsis", "director", "allocine_rating", "already_seen", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Olympia Auer"], ["year", 1996], ["genre", "Rock"], ["synopsis", "heathcote"], ["director", "Huels"], ["allocine_rating", 4.39], ["already_seen", 0], ["created_at", "2019-08-01 08:55:28.373915"], ["updated_at", "2019-08-01 08:55:28.373915"]]
+  [1m[35m (233.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 100], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT ?[0m  [["LIMIT", 10]]
